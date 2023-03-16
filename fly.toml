@@ -1,6 +1,6 @@
-# fly.toml file generated for pgccsf on 2023-03-16T00:22:42-07:00
+# fly.toml file generated for dev-pgccsf on 2023-03-16T07:57:40-07:00
 
-app = "pgccsf"
+app = "dev-pgccsf"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "sjc"
@@ -15,6 +15,10 @@ processes = []
 
 [experimental]
   auto_rollback = true
+
+[mounts]
+  destination = "/data"
+  source = "pgccsf_volume1"
 
 [[services]]
   http_checks = []
@@ -41,3 +45,4 @@ processes = []
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+

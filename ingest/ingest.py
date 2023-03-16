@@ -1,10 +1,14 @@
 """Load html from files, clean up, split, ingest into Weaviate."""
 from pathlib import Path
-from langchain.document_loaders import ReadTheDocsLoader
+# from langchain.document_loaders import ReadTheDocsLoader
+import os
+from unstructured.partition.pdf import partition_pdf
+
 
 if __name__ == "__main__":
-    loader = ReadTheDocsLoader("https://pgccsf.com/getmedia/c544a939-6152-425e-80f8-f33827159a8a/PGCC_Golf_Handbook_04_1.aspx")
-    raw_documents = loader.load()
+    # loader = ReadTheDocsLoader()
+    # raw_documents = loader.load()
+    raw_documents = partition_pdf(os.environ.get('FILE_URL'))
     dir_path = Path("ingested_data")
     dir_path.mkdir(parents=True, exist_ok=True)
     for i, doc in enumerate(raw_documents):

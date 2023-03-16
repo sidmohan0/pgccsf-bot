@@ -1,6 +1,6 @@
-# fly.toml file generated for pgccsf-bot on 2023-03-16T00:01:52-07:00
+# fly.toml file generated for pgccsf on 2023-03-16T00:09:36-07:00
 
-app = "pgccsf-bot"
+app = "pgccsf"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "sjc"

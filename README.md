@@ -2,7 +2,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, create a new `.env` file from `.env.example` and add your OpenAI API key found [here](https://platform.openai.com/account/api-keys).
 
 ```bash
 cp .env.example .env
@@ -10,7 +9,7 @@ cp .env.example .env
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/) (v16 or higher)
+- [Node.js](https://nodejs.org/en/download/) (v16 or higher i used v19.16.0)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 - `wget` (on macOS, you can install this with `brew install wget`)
 
@@ -71,7 +70,6 @@ seems, Vercel's serverless functions seem to prohibit streaming responses
 
 ## Inspirations
 
-This repo borrows heavily from
 
 - [ChatLangChain](https://github.com/hwchase17/chat-langchain) - for the backend and data ingestion logic
 - [LangChain Chat NextJS](https://github.com/zahidkhawaja/langchain-chat-nextjs) - for the frontend.
